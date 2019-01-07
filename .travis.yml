@@ -19,6 +19,7 @@ services:
 install:
   - travis_retry composer self-update
   - travis_retry composer install --prefer-dist --no-interaction
+  - travis_retry composer show
 
 before_script:
   - travis_retry composer self-update
