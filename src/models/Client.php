@@ -13,7 +13,7 @@ use zacksleo\yii2\client\Module;
  * @property string $slug
  * @property integer $status
  */
-class AdPosition extends \yii\db\ActiveRecord
+class Client extends \yii\db\ActiveRecord
 {
     const STATUS_ACTIVE = 1;
     const STATUS_INACTIVE = 0;
