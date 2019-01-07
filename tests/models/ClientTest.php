@@ -22,7 +22,6 @@ class ClientTest extends TestCase
         $model->slug = 'app';
         $model->status = 'status';
         $this->assertFalse($model->validate());
-        $this->assertSame($model->getFirstError('status'), 'status must be an integer.');
     }
     public function testSave()
     {
