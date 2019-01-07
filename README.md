@@ -1,15 +1,11 @@
-[![Latest Stable Version](https://poser.pugx.org/zacksleo/yii2-ad/version)](https://packagist.org/packages/zacksleo/yii2-ad)
-[![Total Downloads](https://poser.pugx.org/zacksleo/yii2-ad/downloads)](https://packagist.org/packages/zacksleo/yii2-ad)
-[![License](https://poser.pugx.org/zacksleo/yii2-ad/license)](https://packagist.org/packages/zacksleo/yii2-ad)
-[![Build Status](https://travis-ci.org/zacksleo/yii2-ad.svg?branch=master)](https://travis-ci.org/zacksleo/yii2-ad)
+[![Latest Stable Version](https://poser.pugx.org/zacksleo/yii-client/version)](https://packagist.org/packages/zacksleo/yii-client)
+[![Total Downloads](https://poser.pugx.org/zacksleo/yii-client/downloads)](https://packagist.org/packages/zacksleo/yii-client)
+[![License](https://poser.pugx.org/zacksleo/yii-client/license)](https://packagist.org/packages/zacksleo/yii-client)
+[![Build Status](https://travis-ci.org/zacksleo/yii-client.svg?branch=master)](https://travis-ci.org/zacksleo/yii-client)
 [![StyleCI](https://styleci.io/repos/82318907/shield?branch=master)](https://styleci.io/repos/82318907)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zacksleo/yii2-ad/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/zacksleo/yii2-ad/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/zacksleo/yii2-ad/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/zacksleo/yii2-ad/?branch=master)
-# yii2 ad module
-
-# Prerequisites
-
-Install [Yii2 attachments](https://github.com/Nemmo/yii2-attachments) first
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zacksleo/yii-client/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/zacksleo/yii-client/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/zacksleo/yii-client/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/zacksleo/yii-client/?branch=master)
+# yii client module
 
 ## Migration
 
@@ -21,7 +17,7 @@ Install [Yii2 attachments](https://github.com/Nemmo/yii2-attachments) first
             'class' => 'yii\console\controllers\MigrateController',
             'migrationPath' => [
                 ...
-                '@zacksleo/yii2/ad/migrations',
+                '@zacksleo/yii2/client/migrations',
             ],
         ],
     ],
@@ -31,7 +27,7 @@ Install [Yii2 attachments](https://github.com/Nemmo/yii2-attachments) first
 + Or run migration by By migrationPath Parameter
 
 ```
-  ./yii migrate --migrationPath=@zacksleo/yii2/ad/migrations
+  ./yii migrate --migrationPath=@zacksleo/yii2/client/migrations
 
 ```
 
