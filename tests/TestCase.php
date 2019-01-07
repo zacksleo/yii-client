@@ -90,7 +90,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
             'slug' => 'string not null',
             'status' => 'boolean not null default 0',
         ])->execute();
-        $db->createCommand()->createTable('client', [
+        $db->createCommand()->createTable('client_release', [
             'id' => 'pk',
             'client_id' => 'integer',
             'version' => 'string not null',
