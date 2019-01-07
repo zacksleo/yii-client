@@ -35,12 +35,12 @@ class Module extends BaseModule
      */
     protected function registerTranslations()
     {
-        Yii::$app->i18n->translations['zacksleo/yii2/ad/*'] = [
+        Yii::$app->i18n->translations['zacksleo/yii2/client/*'] = [
             'class' => 'yii\i18n\PhpMessageSource',
             'sourceLanguage' => $this->sourceLanguage,
-            'basePath' => '@zacksleo/yii2/ad/messages',
+            'basePath' => '@zacksleo/yii2/client/messages',
             'fileMap' => [
-                'zacksleo/yii2/ad/ad' => 'ad.php',
+                'zacksleo/yii2/client/client' => 'client.php',
             ],
         ];
     }
@@ -58,6 +58,6 @@ class Module extends BaseModule
      */
     public static function t($category, $message, $params = [], $language = null)
     {
-        return Yii::t('zacksleo/yii2/ad/' . $category, $message, $params, $language);
+        return Yii::t('zacksleo/yii2/client/' . $category, $message, $params, $language);
     }
 }
