@@ -8,6 +8,7 @@ use yii\db\Schema;
 /**
  * This is the base class for all yii framework unit tests.
  */
+
 class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()

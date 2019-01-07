@@ -1,20 +1,20 @@
-plugins:
-  duplication:
-    enabled: true
-    config:
-      languages:
-      - php
-  eslint:
-    enabled: true
-  fixme:
-    enabled: true
-  phpmd:
-    enabled: true
-    config:
-      file_extensions: "php"
-ratings:
-  paths:
-  - "**.php"
-exclude_patterns:
-- "tests/"
-- "vendor/"
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./tests/bootstrap.php"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/models</directory>
+        </whitelist>
+    </filter>
+</phpunit>
