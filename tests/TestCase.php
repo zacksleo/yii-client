@@ -82,7 +82,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
         // Structure :
         $tables = $db->schema->getTableNames();
         foreach ($tables as $table) {
-            Yii::app()->db->createCommand()->dropTable($table);
+            Yii::app()->db->createCommand()->dropTable($table)->execute();
         }
         $db->createCommand()->createTable('client', [
             'id' => 'pk',
