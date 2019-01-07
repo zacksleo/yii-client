@@ -6,9 +6,10 @@ use yii\base\Action;
 use zacksleo\yii2\client\models\Client;
 use zacksleo\yii2\client\models\ClientRelease;
 
-class SlugAction extends Action
+class ViewAction extends Action
 {
     public $slug;
+    public $version;
 
     public function run()
     {
@@ -19,8 +20,9 @@ class SlugAction extends Action
             ->where(
                 [
                     'client_id' => $client->id,
+                    'version' => $this->version
                 ]
             )
-            ->all();
+            ->one();
     }
 }
