@@ -20,27 +20,11 @@ $this->registerCss($css);
 
     <div class="row">
         <div class="col-md-5">
-            <?php $form = ActiveForm::begin([
-                'options' => ['enctype' => 'multipart/form-data']
-            ]); ?>
+            <?php $form = ActiveForm::begin(); ?>
 
-            <?= $form->field($model, 'position_id')->dropDownList(ArrayHelper::map(Client::findAll(['status' => Client::STATUS_ACTIVE]), 'id', 'name')) ?>
-            <?= $form->field($model, 'name') ?>
-
-            <?= \nemmo\attachments\components\AttachmentsInput::widget([
-                'id' => 'file-input',
-                'model' => $model,
-                'options' => [
-                    'multiple' => false
-                ],
-                'pluginOptions' => [
-                    'maxFileCount' => 1
-                ]
-            ]) ?>
-
-            <?= $form->field($model, 'url') ?>
+            <?= $form->field($model, 'client_id')->dropDownList(ArrayHelper::map(Client::findAll(['status' => Client::STATUS_ACTIVE]), 'id', 'name')) ?>
+            <?= $form->field($model, 'version') ?>
             <?= $form->field($model, 'status')->dropDownList($model::getStatusList()) ?>
-            <?= $form->field($model, 'order')->input('number') ?>
 
             <div class="form-group">
                 <?= Html::submitButton($model->isNewRecord ? Module::t('client', 'Create') : Module::t('client', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

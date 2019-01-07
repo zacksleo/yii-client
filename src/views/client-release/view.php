@@ -10,9 +10,9 @@ use zacksleo\yii2\client\models\ClientRelease;
 
 \yii\web\YiiAsset::register($this);
 
-$this->title = $model->name;
+$this->title = $model->version;
 $this->params['breadcrumbs'][] = ['label' => Module::t('client', 'Clients'), 'url' => ['default/index']];
-$this->params['breadcrumbs'][] = ['label' => Module::t('client', 'ClientReleases'), 'url' => ['index', 'slug' => $model->adPosition->slug]];
+$this->params['breadcrumbs'][] = ['label' => Module::t('client', 'ClientReleases'), 'url' => ['index', 'slug' => $model->client->slug]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ad-position-view">
@@ -33,19 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'name',
-            [
-                'attribute' => 'img',
-                'value' => function ($model) {
-                    return $model->getImg();
-                },
-                'format' => ['image', ['width' => '100', 'height' => '100']],
-            ],
-            'url',
+            'version',
             [
                 'attribute' => 'status',
                 'value' => function ($model) {
-                    return Ad::getStatusList()[$model->status];
+                    return ClientRelease::getStatusList()[$model->status];
                 }
             ],
         ],

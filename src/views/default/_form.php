@@ -19,8 +19,6 @@ use zacksleo\yii2\client\Module;
 
             <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
-            <?= $form->field($model, 'size')->textInput(['maxlength' => true]) ?>
-
             <?= $form->field($model, 'status')->dropDownList($model::getStatusList()) ?>
 
             <div class="form-group">

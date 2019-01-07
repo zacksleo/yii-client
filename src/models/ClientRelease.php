@@ -51,6 +51,7 @@ class ClientRelease extends ActiveRecord
             'id' => Module::t('client', 'ID'),
             'client_id' => Module::t('client', 'Client ID'),
             'status' => Module::t('client', 'Status'),
+            'version' => Module::t('client', 'Version'),
             'created_at' => Module::t('client', 'CreatedAt'),
             'updated_at' => Module::t('client', 'UpdatedAt'),
         ];

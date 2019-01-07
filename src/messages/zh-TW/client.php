@@ -8,7 +8,7 @@ return [
     'View' => '查看',
     'Active' => '激活',
     'Inactive' => '禁用',
-
+    'InReview' => '审核中',
 
     'Slug' => '唯一標識',
     'Name' => '名稱',
@@ -20,4 +20,5 @@ return [
 
     'Clients' => '客戶端',
     'Releases' => '版本列表',
+    'ClientReleases'=> '版本列表'
 ];

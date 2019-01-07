@@ -24,7 +24,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'name',
             'slug',
-            'size',
             [
                 'attribute' => 'status',
                 'value' => function ($model) {
@@ -37,9 +36,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'template' => '{view} {list} {update} {delete}',
                 'buttons' => [
                     'list' => function ($url, $model, $key) {
-                        $url = \yii\helpers\Url::to(['ad/index', 'slug' => $model->slug]);
+                        $url = \yii\helpers\Url::to(['client-release/index', 'slug' => $model->slug]);
                         return Html::a("<span class=\"glyphicon glyphicon-list\"></span>", $url, [
-                            'title' => '设置广告'
+                            'title' => '发布列表'
                         ]);
                     }
                 ]

@@ -13,8 +13,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ad-position-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <p>
         <?= Html::a(Module::t('client', 'Create'), ['create', 'slug' => $_GET['slug']], ['class' => 'btn btn-success']) ?>
     </p>
@@ -22,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'name',
+            'version',
             [
                 'attribute' => 'client_id',
                 'value' => 'client.name'

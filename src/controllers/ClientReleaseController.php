@@ -38,7 +38,7 @@ class ClientReleaseController extends Controller
     public function actionIndex()
     {
         $slug = Yii::$app->request->get('slug');
-        $query = Client::find();
+        $query = ClientRelease::find();
         $this->view->title = '应用列表: ';
         if (!empty($slug) && ($client = Client::findOne(['slug' => $slug])) != null) {
             $query = $query->andWhere(['client_id' => $client->id]);
