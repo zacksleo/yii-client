@@ -5,6 +5,7 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\FileHelper;
 use yii\db\Schema;
+
 /**
  * This is the base class for all yii framework unit tests.
  */
