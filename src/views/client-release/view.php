@@ -11,8 +11,8 @@ use zacksleo\yii2\client\models\ClientRelease;
 \yii\web\YiiAsset::register($this);
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => Module::t('ad', 'Clients'), 'url' => ['default/index']];
-$this->params['breadcrumbs'][] = ['label' => Module::t('ad', 'ClientReleases'), 'url' => ['index', 'slug' => $model->adPosition->slug]];
+$this->params['breadcrumbs'][] = ['label' => Module::t('client', 'Clients'), 'url' => ['default/index']];
+$this->params['breadcrumbs'][] = ['label' => Module::t('client', 'ClientReleases'), 'url' => ['index', 'slug' => $model->adPosition->slug]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ad-position-view">
@@ -20,8 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Module::t('ad', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Module::t('ad', 'Delete'), ['delete', 'id' => $model->id], [
+        <?= Html::a(Module::t('client', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Module::t('client', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),

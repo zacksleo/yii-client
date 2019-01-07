@@ -7,7 +7,7 @@ use zacksleo\yii2\client\Module;
 /* @var $model zacksleo\yii2\client\models\AdPosition */
 
 $this->title = Module::t('client-releases', 'Create');
-$this->params['breadcrumbs'][] = ['label' => Module::t('ad', 'ClientReleases'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Module::t('client', 'ClientReleases'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ad-position-create">

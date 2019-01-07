@@ -24,7 +24,7 @@ use zacksleo\yii2\client\Module;
             <?= $form->field($model, 'status')->dropDownList($model::getStatusList()) ?>
 
             <div class="form-group">
-                <?= Html::submitButton($model->isNewRecord ? Module::t('ad', 'Create') : Module::t('ad', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                <?= Html::submitButton($model->isNewRecord ? Module::t('client', 'Create') : Module::t('client', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
             </div>
 
             <?php ActiveForm::end(); ?>

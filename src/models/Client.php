@@ -45,10 +45,10 @@ class Client extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Module::t('ad', 'ID'),
-            'name' => Module::t('ad', 'Name'),
-            'slug' => Module::t('ad', 'Slug'),
-            'status' => Module::t('ad', 'Status'),
+            'id' => Module::t('client', 'ID'),
+            'name' => Module::t('client', 'Name'),
+            'slug' => Module::t('client', 'Slug'),
+            'status' => Module::t('client', 'Status'),
         ];
     }
 
