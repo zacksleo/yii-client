@@ -1,0 +1,20 @@
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - php
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+    config:
+      file_extensions: "php"
+ratings:
+  paths:
+  - "**.php"
+exclude_patterns:
+- "tests/"
+- "vendor/"
