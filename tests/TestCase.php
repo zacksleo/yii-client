@@ -1,7 +1,7 @@
 <?php
 namespace tests;
 
-use Yii;
+use yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\FileHelper;
 use yii\db\Schema;
@@ -80,7 +80,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         $db = Yii::$app->getDb();
         // Structure :
-        $tables = Yii::app()->db->schema->getTableNames();
+        $tables = $db->schema->getTableNames();
         foreach ($tables as $table) {
             Yii::app()->db->createCommand()->dropTable($table);
         }
