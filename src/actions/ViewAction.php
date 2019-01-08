@@ -5,6 +5,7 @@ namespace zacksleo\yii2\client\actions;
 use yii\base\Action;
 use zacksleo\yii2\client\models\Client;
 use zacksleo\yii2\client\models\ClientRelease;
+use yii\web\NotFoundHttpException;
 
 class ViewAction extends Action
 {
@@ -14,9 +15,9 @@ class ViewAction extends Action
     public function run()
     {
         if (($client = Client::findOne(['slug' => $this->slug, 'status' => Client::STATUS_ACTIVE])) == null) {
-            return [];
+            throw new NotFoundHttpException('Your request does not exists.');
         }
-        return ClientRelease::find()->orderBy('created_at DESC')
+        $relsese = ClientRelease::find()->orderBy('created_at DESC')
             ->where(
                 [
                     'client_id' => $client->id,
@@ -24,5 +25,9 @@ class ViewAction extends Action
                 ]
             )
             ->one();
+        if (empty($relsese)) {
+            throw new NotFoundHttpException('Your request does not exists.');
+        }
+        return  $release;
     }
 }
