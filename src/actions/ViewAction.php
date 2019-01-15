@@ -17,7 +17,7 @@ class ViewAction extends Action
         if (($client = Client::findOne(['slug' => $this->slug, 'status' => Client::STATUS_ACTIVE])) == null) {
             throw new NotFoundHttpException('Your request does not exists.');
         }
-        $relsese = ClientRelease::find()->orderBy('created_at DESC')
+        $release = ClientRelease::find()->orderBy('created_at DESC')
             ->where(
                 [
                     'client_id' => $client->id,
@@ -25,9 +25,9 @@ class ViewAction extends Action
                 ]
             )
             ->one();
-        if (empty($relsese)) {
+        if (empty($release)) {
             throw new NotFoundHttpException('Your request does not exists.');
         }
-        return  $release;
+        return $release;
     }
 }
